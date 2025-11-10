@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <header>
+        <h1>Trivia Game</h1>
+        <p id="session-status" aria-live="polite"></p>
+      </header>
+
+      <form id="trivia-form">
+        <!-- Loading animation while fetching questions -->
+        <div id="loading-container" class="hidden">
+          <div class="skeleton skeleton-option"></div>
+          <div class="skeleton skeleton-option"></div>
+          <div class="skeleton skeleton-option"></div>
+          <div class="skeleton skeleton-option"></div>
+          <div class="skeleton skeleton-option"></div>
+          <div class="skeleton skeleton-option"></div>
+          <div class="skeleton skeleton-option"></div>
+          <div class="skeleton skeleton-option"></div>
+          <div class="skeleton skeleton-option"></div>
+          <div class="skeleton skeleton-option"></div>
+        </div>
+
+        <div id="question-container" class="hidden"></div>
+
+        <label for="username" class="visually-hidden">Player name</label>
+        <input type="text" id="username" placeholder="Enter your name" />
+
+        <button type="submit" id="submit-game">Finish Game</button>
+      </form>
+
+      <button id="new-player" class="hidden" type="button">New Player</button>
+
+      <table id="score-table">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Score</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Scores will appear here -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
