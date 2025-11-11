@@ -51,3 +51,19 @@ button {
 #score-table th, #score-table td {
   border:1px solid #ddd; padding:0.75rem; text-align:left;
 }
+/* Fun bits */
+.badge {
+  display:inline-block; font-size:.8rem; padding:.15rem .35rem;
+  border-radius:.35rem; margin-right:.35rem; background:#eee;
+}
+.badge.emoji { background:#ffeec2; }
+.badge.diff { background:#e2f0ff; }
+
+.shake { animation: shake .25s linear 2; }
+@keyframes shake {
+  0%{transform:translateX(0)} 25%{transform:translateX(-3px)}
+  50%{transform:translateX(3px)} 75%{transform:translateX(-3px)}
+  100%{transform:translateX(0)}
+}
+.micro-note { font-size:.85rem; opacity:.8; margin-top:.25rem; }
+
